@@ -6,4 +6,16 @@
     <string name="email_and_password">Email and password</string>
     <string name="textview2">TextView2</string>
     <string name="textview3">TextView3</string>
+    <string name="email_error">Please add your email address</string>
+    <string name="password_error">Password cannot be void</string>
+    <string name="email_not_valid">Email is not valid</string>
+    <string name="about_android_views">About Android views</string>
+    <string name="about_android">About Android</string>
+    <string name="accept_t_c">Accept Terms and Conditions</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="enable_back_up">Enable back-up</string>
+    <string name="text_1">Text 1</string>
+    <string name="text_2">Text 2</string>
+    <string name="text_3">Text 3</string>
 </resources>
