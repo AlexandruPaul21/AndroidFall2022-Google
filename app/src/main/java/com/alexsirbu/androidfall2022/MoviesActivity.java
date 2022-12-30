@@ -1,6 +1,8 @@
 package com.alexsirbu.androidfall2022;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -10,11 +12,15 @@ import java.util.List;
 public class MoviesActivity extends AppCompatActivity {
 
     private List<Movie> movieList;
+    private RecyclerView moviesRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
+
+        moviesRecyclerView = findViewById(R.id.recyclerViewMovies);
+        setupRecyclerView();
     }
 
     // step 0 => Define RecyclerView in the .xml file & define the item template - DONE
@@ -38,9 +44,23 @@ public class MoviesActivity extends AppCompatActivity {
 
     // step 2   => get Custom Adapter
     // step 2.1 => define the ViewHolder - DONE
-    // step 2.2 => define the Adapter
+    // step 2.2 => define the Adapter - DONE
 
     // step 3   => setup adapter for the RecyclerView
     // step 3.1 => setup Layout Manager
+    private void setMoviesLayoutManager() {
+        moviesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
     // step 3.2 => setup adapter
+    private void setMoviesAdapter() {
+        moviesRecyclerView.setAdapter(new MovieAdapter(movieList));
+    }
+
+    //step 3
+    private void setupRecyclerView() {
+        setMovies();
+        setMoviesLayoutManager();
+        setMoviesAdapter();
+    }
 }

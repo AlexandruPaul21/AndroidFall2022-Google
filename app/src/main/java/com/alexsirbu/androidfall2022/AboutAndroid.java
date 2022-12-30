@@ -68,7 +68,7 @@ public class AboutAndroid extends AppCompatActivity {
 
     //second step => define adapter - DONE
     private ArrayAdapter<String> getDefaultAdapter() {
-        return new ArrayAdapter<String>(AboutAndroid.this, android.R.layout.simple_spinner_item, cities);
+        return new ArrayAdapter<>(AboutAndroid.this, android.R.layout.simple_spinner_item, cities);
     }
 
     //third step => for spinner set the adapter

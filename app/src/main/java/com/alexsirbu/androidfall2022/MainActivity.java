@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (valid) {
             textViewDisplayAccount.setText(String.format("%s, %s", email, password));
+            Intent displayMoviesActivity = new Intent(MainActivity.this, MoviesActivity.class);
+            startActivity(displayMoviesActivity);
         }
     }
 }
