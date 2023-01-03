@@ -1,7 +1,5 @@
 package com.alexsirbu.androidfall2022;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.alexsirbu.androidfall2022.activities.FirstActivity;
+import com.alexsirbu.androidfall2022.navigation.NavigationActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Main Activity";
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewDisplayAccount;
     private Button buttonDisplayAboutAndroid;
     private Button buttonOpenActivity;
+    private Button buttonOpenNavigationActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
         setupViews();
         displayAboutAndroidOnClick();
         openActivityOnClick();
+        openNavActOnClick();
+    }
+
+    private void openNavActOnClick() {
+        buttonOpenActivity.setOnClickListener(view -> {
+            Intent navigationActivity = new Intent(MainActivity.this, NavigationActivity.class);
+            startActivity(navigationActivity);
+        });
     }
 
     private void setupViews() {
@@ -39,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         textViewDisplayAccount = findViewById(R.id.textViewDisplayAccount);
         buttonDisplayAboutAndroid = findViewById(R.id.buttonAboutAndroid);
         buttonOpenActivity = findViewById(R.id.buttonOpenActivity);
+        buttonOpenActivity = findViewById(R.id.buttonOpenNavigationActivity);
     }
 
     private void displayAboutAndroidOnClick() {
