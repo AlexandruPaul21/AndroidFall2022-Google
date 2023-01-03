@@ -20,4 +20,8 @@
     <string name="text_3">Text 3</string>
     <string name="image">Image</string>
     <string name="select_a_city">Select a city</string>
+    <string name="this_is_the_first_activity">This is the first activity</string>
+    <string name="open_new_activity">Open new activity</string>
+    <string name="this_is_the_second_activity">This is the second activity</string>
+    <string name="open_second_activity">Open second activity</string>
 </resources>
