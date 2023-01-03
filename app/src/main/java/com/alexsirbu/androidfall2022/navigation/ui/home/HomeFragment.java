@@ -8,11 +8,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alexsirbu.androidfall2022.R;
 import com.alexsirbu.androidfall2022.networking.OnGetUsersCallback;
 import com.alexsirbu.androidfall2022.networking.User;
+import com.alexsirbu.androidfall2022.networking.UserAdapter;
 import com.alexsirbu.androidfall2022.networking.UsersRepository;
 
 import java.util.List;
@@ -44,6 +46,8 @@ public class HomeFragment extends Fragment {
                 //Recycler View
                 Log.e("github users", users.toString());
                 githubUsers = users;
+                recyclerViewGithubUsers.setLayoutManager(new LinearLayoutManager(getActivity()));
+                recyclerViewGithubUsers.setAdapter(new UserAdapter(githubUsers));
             }
 
             @Override

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openNavActOnClick() {
-        buttonOpenActivity.setOnClickListener(view -> {
+        buttonOpenNavigationActivity.setOnClickListener(view -> {
             Intent navigationActivity = new Intent(MainActivity.this, NavigationActivity.class);
             startActivity(navigationActivity);
         });
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         textViewDisplayAccount = findViewById(R.id.textViewDisplayAccount);
         buttonDisplayAboutAndroid = findViewById(R.id.buttonAboutAndroid);
         buttonOpenActivity = findViewById(R.id.buttonOpenActivity);
-        buttonOpenActivity = findViewById(R.id.buttonOpenNavigationActivity);
+        buttonOpenNavigationActivity = findViewById(R.id.buttonOpenNavigationActivity);
     }
 
     private void displayAboutAndroidOnClick() {
