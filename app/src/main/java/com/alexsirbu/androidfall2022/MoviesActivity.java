@@ -30,7 +30,7 @@ public class MoviesActivity extends AppCompatActivity {
     // step 1.2 => Populate the date source
     private void setMovies() {
         movieList = new ArrayList<>();
-        movieList.add(new Movie("Home Alone", "Comedy", ""));
+        movieList.add(new Movie("Home Alone", "Comedy", "https://lumiere-a.akamaihd.net/v1/images/homealone2_7706aa6d.jpeg"));
         movieList.add(new Movie("Harry Potter", "Fantasy", ""));
         movieList.add(new Movie("Kill Bill", "Action", ""));
         movieList.add(new Movie("Avatar", "Science-Fiction", ""));
