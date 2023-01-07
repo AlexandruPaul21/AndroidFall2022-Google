@@ -43,4 +43,6 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="open_navigation_activity">Open navigation activity</string>
     <string name="storage">Storage</string>
+    <string name="insert_word">Insert word</string>
+    <string name="invision_yesterday">InVision - Yesterday</string>
 </resources>
