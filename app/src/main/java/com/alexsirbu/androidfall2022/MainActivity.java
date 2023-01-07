@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.alexsirbu.androidfall2022.activities.FirstActivity;
 import com.alexsirbu.androidfall2022.navigation.NavigationActivity;
+import com.alexsirbu.androidfall2022.storage.StorageActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Main Activity";
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonDisplayAboutAndroid;
     private Button buttonOpenActivity;
     private Button buttonOpenNavigationActivity;
+    private Button buttonOpenStorageActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         displayAboutAndroidOnClick();
         openActivityOnClick();
         openNavActOnClick();
+        openStorageActivity();
+    }
+
+    private void openStorageActivity() {
+        buttonOpenStorageActivity.setOnClickListener(view -> {
+            Intent storageActivity = new Intent(MainActivity.this, StorageActivity.class);
+            startActivity(storageActivity);
+        });
     }
 
     private void openNavActOnClick() {
@@ -50,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDisplayAboutAndroid = findViewById(R.id.buttonAboutAndroid);
         buttonOpenActivity = findViewById(R.id.buttonOpenActivity);
         buttonOpenNavigationActivity = findViewById(R.id.buttonOpenNavigationActivity);
+        buttonOpenStorageActivity = findViewById(R.id.buttonOpenStorageActivity);
     }
 
     private void displayAboutAndroidOnClick() {
