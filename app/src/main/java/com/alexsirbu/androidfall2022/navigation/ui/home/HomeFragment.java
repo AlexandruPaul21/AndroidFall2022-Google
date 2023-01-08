@@ -26,7 +26,7 @@ public class HomeFragment extends Fragment {
     private List<User> githubUsers;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
+                             ViewGroup container, Bundle savedInstanceState) {
 
         getGithubUsers();
 

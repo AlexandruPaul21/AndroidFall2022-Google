@@ -2,21 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/layoutAnimations"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:background="@drawable/animation"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
     tools:context=".storage.StorageActivity">
 
     <Button
         android:id="@+id/buttonInsertWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
         android:text="@string/insert_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="@dimen/activity_horizontal_margin"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/LargeBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_with_special_style" />
+
+    <TextView
+        style="@style/LargeBlueTextItalic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_with_a_new_style" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -33,7 +47,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Blockchain doesn't matter. Here's why. Inside Design Blog"
+                android:text="@string/blockchain_doesn_t_matter_here_s_why_inside_design_blog"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 app:layout_constraintEnd_toStartOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="parent"

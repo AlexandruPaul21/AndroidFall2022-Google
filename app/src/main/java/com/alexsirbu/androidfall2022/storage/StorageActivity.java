@@ -1,8 +1,10 @@
 package com.alexsirbu.androidfall2022.storage;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -20,6 +22,7 @@ public class StorageActivity extends AppCompatActivity {
     protected static final String SLIDES = "slides";
 
     private WordViewModel wordViewModel;
+    private LinearLayout layoutAnimation;
 
     private Button buttonInsertWord;
 
@@ -31,6 +34,7 @@ public class StorageActivity extends AppCompatActivity {
         useSharedPreferences();
 
         buttonInsertWord = findViewById(R.id.buttonInsertWord);
+        layoutAnimation = findViewById(R.id.layoutAnimations);
 
         wordViewModel = new ViewModelProvider(this).get(WordViewModel.class);
         wordViewModel.getWords().observe(this, new Observer<List<Word>>() {
@@ -41,6 +45,14 @@ public class StorageActivity extends AppCompatActivity {
         });
 
         insertNewWords();
+        setAnimation();
+    }
+
+    private void setAnimation() {
+        AnimationDrawable animationDrawable = (AnimationDrawable) layoutAnimation.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(5000);
+        animationDrawable.start();
     }
 
     private void insertNewWords() {
